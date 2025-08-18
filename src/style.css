@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+/*
+Base style
+*/
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+label,
+input,
+textarea,
+select,
+button {
+    cursor: pointer;
+}
+
+button {
+    border: 0;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* バックグラウンド */
+.bg-rotate {
+    position: fixed;
+    top: -100%;
+    left: -30%;
+    width: 150vw;
+    height: 300vh;
+    background: linear-gradient(300deg, #ff57b9, #00f2fe);
+    animation: backgroundAnimation 10s infinite linear;
+    z-index: -1;
+}
+@keyframes backgroundAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* セクション */
+section{
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ヒーローセクション */
+.hero {
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotate(0deg);
+}
+.hero.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero h1 {
+    font-size: 4rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+/* サイト内リンク */
+.site-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.site-nav li {
+    margin: 0 15px;
+}
+.site-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.site-nav a:hover {
+    text-decoration: underline;
+}
+/* 制作物 */
+.works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.work-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.work-card:hover {
+    transform: translateY(-5px);
+}
+/* リンク */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+/* コンタクト */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+form input,
+form textarea,
+form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+}
+form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form button:hover {
+    background: #0056b3;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Geek's Portfolio</title>
+        <meta name="description" content="">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./src/sanitize.css">
+        <link rel="stylesheet" href="./src/style.css" />
+    </head>
+    <body>
+      <div class="bg-rotate"></div>
+
+        <!-- ヒーローセクション -->
+        <section class="hero" id="js-hero">
+            <h1>GEEK's Portfolio</h1>
+        </section>
+
+        <!-- サイト内リンク -->
+        <nav class="site-nav">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- 自己紹介 -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                ここに自己紹介文を入れます。学習歴や強み、エンジニアとして大事にしていることなど。
+            </p>
+        </section>
+
+        <!-- 制作物 -->
+        <section id="works">
+            <h2>Works</h2>
+            <div class="works">
+                <div class="work-card">
+                    <h3>制作物1</h3>
+                    <p>説明テキスト。<br /><a href="#">GitHubリンク</a></p>
+                </div>
+                <div class="work-card">
+                    <h3>制作物2</h3>
+                    <p>説明テキスト。<br /><a href="#">GitHubリンク</a></p>
+                </div>
+                <div class="work-card">
+                    <h3>制作物3</h3>
+                    <p>説明テキスト。<br /><a href="#">GitHubリンク</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- リンク -->
+        <section id="links">
+            <h2>Links</h2>
+            <div class="links">
+                <a href="#">GitHub</a>
+                <a href="#">Paiza</a>
+                <a href="#">Qiita</a>
+            </div>
+        </section>
+
+        <!-- コンタクト -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" name="name" placeholder="お名前" required />
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="メールアドレス"
+                    required
+                />
+                <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="メッセージ"
+                    required
+                ></textarea>
+                <button type="submit">送信</button>
+            </form>
+        </section>
+
+        <script type="module" src="./src/main.js"></script>
+    </body>
+</html>
