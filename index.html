@@ -2,10 +2,10 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Geek's Portfolio</title>
-        <meta name="description" content="">
+        <title>HIJIRI's Portfolio</title>
+        <meta name="description" content="" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,55 +14,140 @@
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="./src/sanitize.css">
+        <link rel="stylesheet" href="./src/sanitize.css" />
         <link rel="stylesheet" href="./src/style.css" />
     </head>
     <body>
-      <div class="bg-rotate"></div>
+        <!-- background animation -->
+        <div class="bg-rotate" id="js-bg-rotate"></div>
 
-        <!-- ヒーローセクション -->
-        <section class="hero" id="js-hero">
-            <h1>GEEK's Portfolio</h1>
-        </section>
-
-        <!-- サイト内リンク -->
+        <!-- nav -->
         <nav class="site-nav">
             <ul>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#works">Works</a></li>
                 <li><a href="#links">Links</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
-        <!-- 自己紹介 -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                ここに自己紹介文を入れます。学習歴や強み、エンジニアとして大事にしていることなど。
-            </p>
+        <!-- hero -->
+        <section class="hero" id="js-hero">
+            <h1>HIJIRI's Portfolio</h1>
         </section>
 
-        <!-- 制作物 -->
-        <section id="works">
-            <h2>Works</h2>
-            <div class="works">
-                <div class="work-card">
-                    <h3>制作物1</h3>
-                    <p>説明テキスト。<br /><a href="#">GitHubリンク</a></p>
-                </div>
-                <div class="work-card">
-                    <h3>制作物2</h3>
-                    <p>説明テキスト。<br /><a href="#">GitHubリンク</a></p>
-                </div>
-                <div class="work-card">
-                    <h3>制作物3</h3>
-                    <p>説明テキスト。<br /><a href="#">GitHubリンク</a></p>
+        <!-- About Me -->
+        <section id="about">
+            <h2 class="about-headline">About Me</h2>
+            <div class="about-description">
+                <p>
+                    はじめまして、HIJIRIと申します！<br />
+                    私は現在Webエンジニア転職を目指して日々学習に取り組んでおります。<br />
+                    学習を始めて10ヶ月ほど経ち、未だポートフォリオが無いことに気付いたので<br />
+                    フロントエンドのスキルを活かしてこのポートフォリオサイトを作成しました。<br />
+                    <br />
+                    学習を通じて、HTML/CSS/JavaScriptの基礎から始まり、<br />
+                    PHPやLaravel、PostgreSQLなどのバックエンド技術にも触れています。<br />
+                    また、Dockerを使った開発環境の構築や、
+                    Figmaを使ったデザインの実装にも挑戦しています。<br />
+                    <br />
+                    このポートフォリオサイトでは、私の学習の成果やスキルセットを紹介しています。<br />
+                    今後、実際のプロジェクトや開発経験も追加していく予定です。<br />
+                    ぜひご覧ください！
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-logo">
+                            <img
+                                src="./public/html.png"
+                                alt="HTML/CSS/JS Logo"
+                            />
+                        </div>
+                        <h3>HTML</h3>
+                        <p class="level">Level: ★★★☆☆</p>
+                        <p class="status">実務レベルに向けて強化中</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-logo">
+                            <img
+                                src="./public/css.png"
+                                alt="HTML/CSS/JS Logo"
+                            />
+                        </div>
+                        <h3>CSS</h3>
+                        <p class="level">Level: ★★★☆☆</p>
+                        <p class="status">実務レベルに向けて強化中</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-logo">
+                            <img
+                                src="./public/javascript.png"
+                                alt="HTML/CSS/JS Logo"
+                            />
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p class="level">Level: ★★★☆☆</p>
+                        <p class="status">実務レベルに向けて強化中</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-logo">
+                            <img
+                                src="./public/php.png"
+                                alt="PHP/Laravel Logo"
+                            />
+                        </div>
+                        <h3>PHP</h3>
+                        <p class="level">Level: ★★☆☆☆</p>
+                        <p class="status">基本的なCRUDを実装済み</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-logo">
+                            <img
+                                src="./public/postgrespl.png"
+                                alt="HTML/CSS/JS Logo"
+                            />
+                        </div>
+                        <h3>PostgreSQL</h3>
+                        <p class="level">Level: ★★★☆☆</p>
+                        <p class="status">実務レベルに向けて強化中</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-logo">
+                            <img
+                                src="./public/docker.png"
+                                alt="Docker Logo"
+                            />
+                        </div>
+                        <h3>Docker (Laravel Sail)</h3>      
+                        <p class="level">Level: ★★☆☆☆</p>
+                        <p class="status">環境構築に使用</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- リンク -->
+        <!-- Works -->
+        <section id="works">
+            <h2>Works</h2>
+            <div class="works">
+                <div class="work-card coming-soon">
+                    <h3>Coming Soon...</h3>
+                    <p>
+                        現在準備中です。学習や開発が進み次第、こちらに実績を追加予定です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links -->
         <section id="links">
             <h2>Links</h2>
             <div class="links">
@@ -72,7 +157,7 @@
             </div>
         </section>
 
-        <!-- コンタクト -->
+        <!-- Contact -->
         <section id="contact">
             <h2>Contact</h2>
             <form>

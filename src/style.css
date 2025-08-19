@@ -3,13 +3,14 @@
 /*
 Base style
 */
-html{
+html {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Noto Sans JP", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-family: 'Noto Sans JP', 'Helvetica Neue', 'Helvetica', 'Hiragino Sans',
+        'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;
     font-size: 15px;
     line-height: 1.5;
     color: #fff;
@@ -24,56 +25,60 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     border: 0;
 }
 
-h2{
+h2 {
     font-size: 2rem;
-    margin: 20px 0;
+    margin: 50px 0 20px;
     text-align: center;
 }
 
-/* バックグラウンド */
+section {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+/*
+background animation
+*/
 .bg-rotate {
     position: fixed;
-    top: -100%;
-    left: -30%;
-    width: 150vw;
-    height: 300vh;
-    background: linear-gradient(300deg, #ff57b9, #00f2fe);
+    top: 50%;
+    left: 50%;
+    width: 250vw;
+    height: 250vh;
+    background: radial-gradient(circle at 25% 25%, #ff57b9, #00f2fe);
     animation: backgroundAnimation 10s infinite linear;
+    transform-origin: center;
     z-index: -1;
 }
 @keyframes backgroundAnimation {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
-/* セクション */
-section{
-  width: 100vw;
-  height: 100vh;
-}
-
-/* ヒーローセクション */
+/* 
+hero
+ */
 .hero {
-    height: 100vh;
-    width: 100vw;
-    color: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    transform: rotate(0deg);
 }
 .hero.fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1s ease-in forwards;
 }
 @keyframes fadeIn {
     from {
@@ -86,20 +91,55 @@ section{
     }
 }
 .hero h1 {
-    font-size: 4rem;
+    position: relative;
+    font-size: 50px;
 }
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-/* サイト内リンク */
-.site-nav {
+.hero h1::before {
     position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 120%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: conic-gradient(
+        #fff 0deg 340deg,
+        /* ピンク色が90度分だけ描かれる */ transparent 90deg 360deg
+    );
+    animation: spin 2.5s linear infinite;
+    mask: radial-gradient(
+        closest-side,
+        transparent calc(100% - 8px),
+        black calc(100% - 8px)
+    );
+    -webkit-mask: radial-gradient(
+        closest-side,
+        transparent calc(100% - 2px),
+        black calc(100% - 2px)
+    );
+}
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/*
+site-nav
+*/
+.site-nav {
+    position: fixed;
     top: 0;
     right: 0;
     color: white;
-    padding: 10px 0;
+    padding: 30px 30px;
     text-align: center;
+    z-index: 1000;
 }
 .site-nav ul {
     list-style: none;
@@ -113,13 +153,86 @@ section{
 }
 .site-nav a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
+    padding-bottom: 5px; /* テキストと下線の間隔 */
+    font-size: 16px;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-position: bottom right; /* 下線の初期位置 */
+    background-size: 0 8px; /* 下線のサイズ（横幅、高さ） */
+    border-radius: 50%; /* 下線の角丸 */
+    transition: background-size 0.5s;
 }
 .site-nav a:hover {
-    text-decoration: underline;
+    background-position: bottom left; /* 下線のホバー時位置 */
+    background-size: 100% 8px; /* 下線の横幅を100%にする */
 }
-/* 制作物 */
+
+/*
+About Me
+*/
+.about-description {
+    text-align: center;
+    padding: 10px 0;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/*
+Skills
+*/
+.skills {
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 横3列固定 */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-logo img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.skill-card .level {
+    font-size: 0.9rem;
+    color: #eee;
+    margin: 0.3rem 0;
+}
+
+.skill-card .status {
+    font-size: 0.85rem;
+    color: #eee;
+    margin: 0.3rem 0;
+}
+
+/*
+works
+*/
 .works {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,18 +248,23 @@ section{
 .work-card:hover {
     transform: translateY(-5px);
 }
-/* リンク */
+
+/*
+Links
+*/
 .links {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 .links a {
-    text-decoration: none;
     color: #007bff;
     font-weight: bold;
 }
-/* コンタクト */
+
+/*
+Contact
+*/
 form {
     display: flex;
     flex-direction: column;
