@@ -93,6 +93,7 @@ hero
 .hero h1 {
     position: relative;
     font-size: 50px;
+    text-aline: center;
 }
 .hero h1::before {
     position: absolute;
