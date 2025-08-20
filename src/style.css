@@ -167,6 +167,10 @@ site-nav
     border-radius: 50%; /* 下線の角丸 */
     transition: background-size 0.5s;
 }
+@media screen and (max-width:768px) {
+    .site-nav a {
+        font-size: 12px;
+    }
 .site-nav a:hover {
     background-position: bottom left; /* 下線のホバー時位置 */
     background-size: 100% 8px; /* 下線の横幅を100%にする */
