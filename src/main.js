@@ -30,5 +30,8 @@ if (window.matchMedia('(max-width: 767px)').matches) {
         }
     };
 
-    $humButton.addEventListener('click', (humHandler, navHandler));
+    $humButton.addEventListener('click', ()=>{
+        humHandler();
+        navHandler();
+    });
 }
