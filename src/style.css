@@ -68,6 +68,21 @@ background animation
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+.bg-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s linear;
+}
+.bg-filter.is-active {
+    opacity: 100;
+    z-index: 1;
+    pointer-events: visible;
+}
 
 /* 
 hero
@@ -93,7 +108,7 @@ hero
     50% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 100;
     }
 }
@@ -197,7 +212,7 @@ site-nav
     .site-nav {
         top: 80px;
         display: block;
-        left: -35vw;
+        left: -60vw;
         opacity: 0;
         text-align: left;
         padding: 0;
@@ -209,14 +224,14 @@ site-nav
     }
     .site-nav ul {
         display: block;
-        line-height: 30px;
+        line-height: 60px;
     }
     .site-nav li {
         display: block;
     }
     .site-nav a {
         display: block;
-        font-size: 14px;
+        font-size: 28px;
         background-image: none;
     }
     .site-nav a:hover {
