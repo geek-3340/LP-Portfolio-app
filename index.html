@@ -18,166 +18,194 @@
         <link rel="stylesheet" href="./src/style.css" />
     </head>
     <body>
-        <!-- background animation -->
-        <div class="bg-rotate" id="js-bg-rotate"></div>
-
-        <!-- nav -->
-        <nav class="site-nav">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#links">Links</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- hero -->
-        <section class="hero" id="js-hero">
-            <h1>HIJIRI's Portfolio</h1>
-        </section>
-
-        <!-- About Me -->
-        <section id="about">
-            <h2 class="about-headline">About Me</h2>
-            <div class="about-description">
-                <p>
-                    はじめまして、HIJIRIと申します！<br />
-                    私は現在Webエンジニア転職を目指して日々学習に取り組んでおります。<br />
-                    学習を始めて10ヶ月ほど経ち、未だポートフォリオが無いことに気付いたので<br />
-                    フロントエンドのスキルを活かしてこのポートフォリオサイトを作成しました。<br />
-                    <br />
-                    学習を通じて、HTML/CSS/JavaScriptの基礎から始まり、<br />
-                    PHPやLaravel、PostgreSQLなどのバックエンド技術にも触れています。<br />
-                    また、Dockerを使った開発環境の構築や、
-                    Figmaを使ったデザインの実装にも挑戦しています。<br />
-                    <br />
-                    このポートフォリオサイトでは、私の学習の成果やスキルセットを紹介しています。<br />
-                    今後、実際のプロジェクトや開発経験も追加していく予定です。<br />
-                    ぜひご覧ください！
-                </p>
+        <header>
+            <!-- nav -->
+            <nav class="site-nav" id="js-siteNav">
+                <ul>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#footer">Links & Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hum">
+                <button type="button" class="hum-button" id="js-humButton">
+                    <span class="hum-lines"></span>
+                    <span class="hum-lines"></span>
+                    <span class="hum-lines"></span>
+                </button>
             </div>
-        </section>
+        </header>
 
-        <!-- Skills -->
-        <section id="skills">
-            <div class="skills">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-logo">
-                            <img
-                                src="./public/html.png"
-                                alt="HTML/CSS/JS Logo"
-                            />
-                        </div>
-                        <h3>HTML</h3>
-                        <p class="level">Level: ★★★☆☆</p>
-                        <p class="status">実務レベルに向けて強化中</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-logo">
-                            <img
-                                src="./public/css.png"
-                                alt="HTML/CSS/JS Logo"
-                            />
-                        </div>
-                        <h3>CSS</h3>
-                        <p class="level">Level: ★★★☆☆</p>
-                        <p class="status">実務レベルに向けて強化中</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-logo">
-                            <img
-                                src="./public/javascript.png"
-                                alt="HTML/CSS/JS Logo"
-                            />
-                        </div>
-                        <h3>JavaScript</h3>
-                        <p class="level">Level: ★★★☆☆</p>
-                        <p class="status">実務レベルに向けて強化中</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-logo">
-                            <img
-                                src="./public/php.png"
-                                alt="PHP/Laravel Logo"
-                            />
-                        </div>
-                        <h3>PHP</h3>
-                        <p class="level">Level: ★★☆☆☆</p>
-                        <p class="status">基本的なCRUDを実装済み</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-logo">
-                            <img
-                                src="./public/postgrespl.png"
-                                alt="HTML/CSS/JS Logo"
-                            />
-                        </div>
-                        <h3>PostgreSQL</h3>
-                        <p class="level">Level: ★★★☆☆</p>
-                        <p class="status">実務レベルに向けて強化中</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-logo">
-                            <img
-                                src="./public/docker.png"
-                                alt="Docker Logo"
-                            />
-                        </div>
-                        <h3>Docker (Laravel Sail)</h3>      
-                        <p class="level">Level: ★★☆☆☆</p>
-                        <p class="status">環境構築に使用</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <main>
+            <!-- wallpaper -->
+            <div class="bg-rotate"></div>
 
-        <!-- Works -->
-        <section id="works">
-            <h2>Works</h2>
-            <div class="works">
-                <div class="work-card coming-soon">
-                    <h3>Coming Soon...</h3>
+            <!-- hero -->
+            <section class="hero" id="js-hero">
+                <h1>HIJIRI's Portfolio</h1>
+            </section>
+
+            <!-- About Me -->
+            <section id="about">
+                <h2 class="about-headline">About Me</h2>
+                <div class="about-description">
                     <p>
-                        現在準備中です。学習や開発が進み次第、こちらに実績を追加予定です。
+                        はじめまして、HIJIRIと申します！<br />
+                        私は現在Webエンジニア転職を目指して日々学習に取り組んでおります。<br />
+                        学習を始めて10ヶ月ほど経ち、未だポートフォリオが無いことに気付いたので<br />
+                        フロントエンドのスキルを活かしてこのポートフォリオサイトを作成しました。<br />
+                        <br />
+                        学習を通じて、HTML/CSS/JavaScriptの基礎から始まり、<br />
+                        PHPやLaravel、PostgreSQLなどのバックエンド技術にも触れています。<br />
+                        また、Dockerを使った開発環境の構築や、
+                        Figmaを使ったデザインの実装にも挑戦しています。<br />
+                        <br />
+                        このポートフォリオサイトでは、私の学習の成果やスキルセットを紹介しています。<br />
+                        今後、実際のプロジェクトや開発経験も追加していく予定です。<br />
+                        ぜひご覧ください！
                     </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Links -->
-        <section id="links">
-            <h2>Links</h2>
-            <div class="links">
-                <a href="#">GitHub</a>
-                <a href="#">Paiza</a>
-                <a href="#">Qiita</a>
-            </div>
-        </section>
+            <!-- Skills -->
+            <section id="skills">
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-logo">
+                                <img src="./public/html.png" alt="HTML Logo" />
+                            </div>
+                            <h3>HTML</h3>
+                            <p class="level">Level: ★★★☆☆</p>
+                            <p class="status">実務レベルに向けて強化中</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-logo">
+                                <img src="./public/css.png" alt="CSS Logo" />
+                            </div>
+                            <h3>CSS</h3>
+                            <p class="level">Level: ★★★☆☆</p>
+                            <p class="status">実務レベルに向けて強化中</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-logo">
+                                <img
+                                    src="./public/javascript.png"
+                                    alt="JS Logo"
+                                />
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p class="level">Level: ★★★☆☆</p>
+                            <p class="status">実務レベルに向けて強化中</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-logo">
+                                <img src="./public/php.png" alt="PHP Logo" />
+                            </div>
+                            <h3>PHP</h3>
+                            <p class="level">Level: ★★★☆☆☆</p>
+                            <p class="status">基本的なCRUDを実装済み</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-logo">
+                                <img
+                                    src="./public/postgrespl.png"
+                                    alt="PostgreSQL Logo"
+                                />
+                            </div>
+                            <h3>PostgreSQL</h3>
+                            <p class="level">Level: ★★☆☆☆</p>
+                            <p class="status">実務レベルに向けて強化中</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-logo">
+                                <img
+                                    src="./public/docker.png"
+                                    alt="Docker Logo"
+                                />
+                            </div>
+                            <h3>Docker (Laravel Sail)</h3>
+                            <p class="level">Level: ★☆☆☆☆</p>
+                            <p class="status">環境構築に使用</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <input type="text" name="name" placeholder="お名前" required />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="メールアドレス"
-                    required
-                />
-                <textarea
-                    name="message"
-                    rows="5"
-                    placeholder="メッセージ"
-                    required
-                ></textarea>
-                <button type="submit">送信</button>
-            </form>
-        </section>
+            <!-- Works -->
+            <section id="works">
+                <h2>Works</h2>
+                <div class="works">
+                    <div class="work-card coming-soon">
+                        <h3>Coming Soon...</h3>
+                        <p>
+                            現在準備中です。学習や開発が進み次第、こちらに実績を追加予定です。
+                        </p>
+                    </div>
+                </div>
+            </section>
 
+            <footer class="footer" id="footer">
+                <!-- Links -->
+                <div class="links" id="links">
+                    <h2>Links</h2>
+                    <div class="links">
+                        <a href="https://github.com/geek-3340" target="_blank"
+                            ><img
+                                src="./public/github.png"
+                                alt="github logo"
+                                width="80px"
+                                height="80px"
+                        /></a>
+                        <a href="https://x.com/punk_sento64" target="_blank"
+                            ><img
+                                src="./public/twitter.png"
+                                alt="x logo"
+                                width="80px"
+                                height="80px"
+                        /></a>
+                        <a href="https://qiita.com/Geek-3340" target="_blank"
+                            ><img
+                                src="./public/qiita-icon.png"
+                                alt="qiita logo"
+                                width="80px"
+                                height="80px"
+                        /></a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="contact" id="contact">
+                    <h2>Contact</h2>
+                    <form>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="お名前"
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="メールアドレス"
+                            required
+                        />
+                        <textarea
+                            name="message"
+                            rows="5"
+                            placeholder="メッセージ"
+                            required
+                        ></textarea>
+                        <button type="submit">送信</button>
+                    </form>
+                </div>
+
+                <p></p>
+            </footer>
+        </main>
         <script type="module" src="./src/main.js"></script>
     </body>
 </html>

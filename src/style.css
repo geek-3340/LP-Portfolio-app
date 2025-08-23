@@ -11,7 +11,6 @@ html {
 body {
     font-family: 'Noto Sans JP', 'Helvetica Neue', 'Helvetica', 'Hiragino Sans',
         'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;
-    font-size: 15px;
     line-height: 1.5;
     color: #fff;
     overflow-x: hidden;
@@ -42,7 +41,8 @@ h2 {
 
 section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: max-content;
     padding-top: 20px;
 }
 
@@ -77,13 +77,33 @@ hero
     justify-content: center;
     align-items: center;
 }
+.hero::before {
+    content: '〉〉';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70px) rotate(90deg);
+    font-size: 24px;
+    animation: flash 1.5s infinite linear;
+}
+@keyframes flash {
+    0% {
+        opacity: 100;
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
 .hero.fade-in {
     animation: fadeIn 1s ease-in forwards;
 }
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
@@ -94,10 +114,11 @@ hero
     position: relative;
     font-size: 50px;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .hero h1 {
         font-size: 30px;
     }
+}
 .hero h1::before {
     position: absolute;
     content: '';
@@ -140,6 +161,7 @@ site-nav
     position: fixed;
     top: 0;
     right: 0;
+    width: max-content;
     color: white;
     padding: 30px 30px;
     text-align: center;
@@ -167,13 +189,91 @@ site-nav
     border-radius: 50%; /* 下線の角丸 */
     transition: background-size 0.5s;
 }
-@media screen and (max-width:768px) {
-    .site-nav a {
-        font-size: 12px;
-    }
 .site-nav a:hover {
-    background-position: bottom left; /* 下線のホバー時位置 */
-    background-size: 100% 8px; /* 下線の横幅を100%にする */
+    background-position: bottom left; /* 下線の位置を変更 */
+    background-size: 100% 8px;
+}
+@media screen and (max-width: 768px) {
+    .site-nav {
+        top: 60px;
+        display: block;
+        left: -35vw;
+        opacity: 0;
+        text-align: left;
+        padding: 0;
+        transition: 0.5s ease-in-out;
+    }
+    .site-nav.is-active {
+        left: 0;
+        opacity: 100;
+    }
+    .site-nav ul {
+        display: block;
+        line-height: 30px;
+    }
+    .site-nav li {
+        display: block;
+    }
+    .site-nav a {
+        display: block;
+        font-size: 14px;
+        background-image: none;
+    }
+    .site-nav a:hover {
+        background-image: none;
+    }
+}
+
+/* nav Button */
+.hum {
+    opacity: 0;
+    pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+    .hum {
+        opacity: 100;
+        pointer-events: visible;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10001;
+    }
+    .hum-button {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+    }
+    .hum-lines {
+        position: absolute;
+        top: 24px;
+        left: 11px;
+        width: 28px;
+        height: 2px;
+        border-radius: 50px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+    .hum-lines:nth-of-type(1) {
+        transform: translateY(-8px) rotate(0);
+    }
+    .hum-lines:nth-of-type(2) {
+        opacity: 100;
+    }
+    .hum-lines:nth-of-type(3) {
+        transform: translateY(8px) rotate(0);
+    }
+    .hum-lines.is-active:nth-of-type(1) {
+        transform: translateY(0) rotate(-45deg);
+    }
+    .hum-lines.is-active:nth-of-type(2) {
+        opacity: 0;
+    }
+    .hum-lines.is-active:nth-of-type(3) {
+        transform: translateY(0) rotate(45deg);
+    }
 }
 
 /*
@@ -185,12 +285,22 @@ About Me
     line-height: 2;
     font-size: 16px;
 }
+@media screen and (max-width: 768px) {
+    .about-description {
+        text-align: center;
+        padding: 10px 0;
+        line-height: 2;
+        font-size: 12px;
+    }
+}
 
 /*
 Skills
 */
 .skills {
     text-align: center;
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .skills-grid {
@@ -199,11 +309,11 @@ Skills
     gap: 1.5rem;
     margin-top: 2rem;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .skills-grid {
         grid-template-columns: repeat(1, 1fr);
     }
-
+}
 .skill-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -262,21 +372,32 @@ works
 }
 
 /*
+footer
+*/
+.footer {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+/*
 Links
 */
 .links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    width: 50vw;
+    text-align: center;
 }
 .links a {
-    color: #007bff;
-    font-weight: bold;
+    margin: 30px 30px;
 }
 
 /*
 Contact
 */
+.contact {
+    width: 50vw;
+    text-align: center;
+}
 form {
     display: flex;
     flex-direction: column;
