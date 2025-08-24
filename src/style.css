@@ -181,7 +181,7 @@ site-nav
     right: 0;
     width: max-content;
     color: white;
-    font-family: 'Bangers';
+    /* font-family: 'Bangers'; */
     padding: 30px 30px;
     text-align: center;
     z-index: 1000;
@@ -418,8 +418,17 @@ Links
     width: 50vw;
     text-align: center;
 }
-.links a {
-    margin: 30px 30px;
+.links-items{
+    padding-top: 50px;
+}
+.links a{
+    margin: 0 2vw 0;
+}
+.links img{
+    max-width: 70px;
+    width: 10vw;
+    height: auto;
+    aspect-ratio: 1/1;
 }
 @media screen and (max-width: 768px) {
     .links {
@@ -428,8 +437,8 @@ Links
         text-align: center;
         padding-top: 20px;
     }
-    .links a {
-        margin: 30px 30px;
+    .links img {
+        width: 15vw;
     }
 }
 
