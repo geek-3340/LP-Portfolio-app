@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Sriracha:wght@400;700&family=Rock+Salt:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Yusei+Magic:wght@400;700&family=Sriracha:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
             rel="stylesheet"
         />
 
@@ -20,15 +20,7 @@
     <body>
         <header>
             <!-- nav -->
-            <nav class="site-nav" id="js-siteNav">
-                <ul>
-                    <li><a href="#">TOP</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#footer">Links & Contact</a></li>
-                </ul>
-            </nav>
+            <nav class="site-nav" id="js-siteNav"></nav>
             <div class="hum">
                 <button type="button" class="hum-button" id="js-humButton">
                     <span class="hum-lines"></span>
@@ -51,23 +43,7 @@
             <!-- About Me -->
             <section id="about">
                 <h2 class="about-headline">About Me</h2>
-                <div class="about-description">
-                    <p>
-                        はじめまして、HIJIRIと申します！<br />
-                        私は現在Webエンジニア転職を目指して日々学習に取り組んでおります。<br />
-                        学習を始めて10ヶ月ほど経ち、未だポートフォリオが無いことに気付いたので<br />
-                        フロントエンドのスキルを活かしてこのポートフォリオサイトを作成しました。<br />
-                        <br />
-                        学習を通じて、HTML/CSS/JavaScriptの基礎から始まり、<br />
-                        PHPやLaravel、PostgreSQLなどのバックエンド技術にも触れています。<br />
-                        また、Dockerを使った開発環境の構築や、
-                        Figmaを使ったデザインの実装にも挑戦しています。<br />
-                        <br />
-                        このポートフォリオサイトでは、私の学習の成果やスキルセットを紹介しています。<br />
-                        今後、実際のプロジェクトや開発経験も追加していく予定です。<br />
-                        ぜひご覧ください！
-                    </p>
-                </div>
+                <div class="about-description"></div>
             </section>
 
             <!-- Skills -->
@@ -81,7 +57,10 @@
                             </div>
                             <h3>HTML</h3>
                             <p class="level">Level: ★★★☆☆</p>
-                            <p class="status">実務レベルに向けて強化中</p>
+                            <p class="frameworks">Framework: EJS</p>
+                            <p class="status">
+                                デザインを元に忠実に実装できます
+                            </p>
                         </div>
                         <div class="skill-card">
                             <div class="skill-logo">
@@ -89,7 +68,12 @@
                             </div>
                             <h3>CSS</h3>
                             <p class="level">Level: ★★★☆☆</p>
-                            <p class="status">実務レベルに向けて強化中</p>
+                            <p class="frameworks">
+                                Framework: Sass,TailwindCSS
+                            </p>
+                            <p class="status">
+                                基本的なスタイルやCSSアニメーションを実装できます
+                            </p>
                         </div>
                         <div class="skill-card">
                             <div class="skill-logo">
@@ -100,15 +84,23 @@
                             </div>
                             <h3>JavaScript</h3>
                             <p class="level">Level: ★★★☆☆</p>
-                            <p class="status">実務レベルに向けて強化中</p>
+                            <p class="frameworks">
+                                Framework: React,TypeScript
+                            </p>
+                            <p class="status">
+                                JSアニメーション、フォーム入力制御ができます<br />現在はReact、TypeScriptについても学習中です
+                            </p>
                         </div>
                         <div class="skill-card">
                             <div class="skill-logo">
                                 <img src="./public/php.png" alt="PHP Logo" />
                             </div>
                             <h3>PHP</h3>
-                            <p class="level">Level: ★★★☆☆☆</p>
-                            <p class="status">基本的なCRUDを実装済み</p>
+                            <p class="level">Level: ★★☆☆☆</p>
+                            <p class="frameworks">Framework: Laravel</p>
+                            <p class="status">
+                                Laravelを用いた簡易なアプリケーションの実装ができます
+                            </p>
                         </div>
                         <div class="skill-card">
                             <div class="skill-logo">
@@ -119,7 +111,8 @@
                             </div>
                             <h3>PostgreSQL</h3>
                             <p class="level">Level: ★★☆☆☆</p>
-                            <p class="status">実務レベルに向けて強化中</p>
+                            <p class="frameworks">Framework: -</p>
+                            <p class="status">基本的なCRUDを実装できます</p>
                         </div>
                         <div class="skill-card">
                             <div class="skill-logo">
@@ -128,9 +121,12 @@
                                     alt="Docker Logo"
                                 />
                             </div>
-                            <h3>Docker (Laravel Sail)</h3>
+                            <h3>Docker</h3>
                             <p class="level">Level: ★☆☆☆☆</p>
-                            <p class="status">環境構築に使用</p>
+                            <p class="frameworks">Framework: -</p>
+                            <p class="status">
+                                Laravel Sailでの環境構築ができます
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -141,6 +137,18 @@
                 <h2>Works</h2>
                 <div class="works">
                     <div class="work-card">
+                        <img
+                            class="Portfolio-img"
+                            src="./public/About Me.png"
+                            alt="Portfolio image"
+                        />
+                        <h3>HIJIRI's PortFolio</h3>
+                        <p>
+                            このサイトです。
+                            HTML/CSS/JavaScriptを用いて実装しています。
+                        </p>
+                    </div>
+                    <div class="work-card coming-soon">
                         <h3>Coming Soon...</h3>
                         <p>
                             現在準備中です。学習や開発が進み次第、こちらに実績を追加予定です。
@@ -193,9 +201,12 @@
                         <button type="submit">Submit</button>
                     </form>
                 </div>
-
-                <p></p>
             </footer>
+            <p class="label-animation">
+                <span class="label-animation__inner"
+                    >Thank you for watching until the end.  Thank you for watching until the end.  Thank you for watching until the end.
+                </span>
+            </p>
         </main>
         <script type="module" src="./src/main.js"></script>
     </body>
