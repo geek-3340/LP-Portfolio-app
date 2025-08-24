@@ -4,7 +4,6 @@ const $humButton = document.getElementById('js-humButton');
 const $humLines = document.querySelectorAll('.hum-lines');
 const $filter = document.getElementById('js-bgFilter');
 
-
 const navListChanger = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
         $siteNav.innerHTML =

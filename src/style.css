@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Noto Sans JP', 'Helvetica Neue', 'Helvetica', 'Hiragino Sans',
+    font-family: 'Sriracha','Noto Sans JP', 'Helvetica Neue', 'Helvetica', 'Hiragino Sans',
         'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;
     line-height: 1.5;
     color: #fff;
@@ -35,9 +35,14 @@ button {
 
 h2 {
     /* font-family: 'Bangers'; */
-    font-size: 40px;
+    font-size: 50px;
     margin: 50px 0 20px;
     text-align: center;
+}
+@media screen and (max-width:768px) {
+    h2{
+        font-size: 40px;
+    }
 }
 
 section {
