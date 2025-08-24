@@ -408,6 +408,16 @@ Links
 .links a {
     margin: 30px 30px;
 }
+@media screen and (max-width: 768px) {
+    .links {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    }
+    .links a {
+    margin: 30px 30px;
+    }
+}
 
 /*
 Contact
