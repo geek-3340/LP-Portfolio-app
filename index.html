@@ -7,6 +7,7 @@
         <title>HIJIRI's Portfolio</title>
         <meta name="description" content="" />
 
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -14,154 +15,191 @@
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="./src/sanitize.css" />
-        <link rel="stylesheet" href="./src/style.css" />
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/styles/sanitize.css" />
+        <link rel="stylesheet" href="./assets/styles/style.css" />
     </head>
     <body>
-        <header>
-            <!-- nav -->
-            <nav class="site-nav" id="js-siteNav"></nav>
-            <div class="hum">
-                <button type="button" class="hum-button" id="js-humButton">
-                    <span class="hum-lines"></span>
-                    <span class="hum-lines"></span>
-                    <span class="hum-lines"></span>
-                </button>
-            </div>
-        </header>
-
-        <main>
-            <!-- wallpaper -->
-            <div class="bg-rotate"></div>
-            <div class="bg-filter" id="js-bgFilter"></div>
-
-            <!-- hero -->
-            <section class="hero" id="js-hero">
-                <h1>HIJIRI's Portfolio</h1>
-            </section>
-
-            <!-- About Me -->
-            <section id="about">
-                <h2 class="about-headline">About Me</h2>
-                <div class="about-description"></div>
-            </section>
-
-            <!-- Skills -->
-            <section id="skills">
-                <div class="skills">
-                    <h2>Skills</h2>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-logo">
-                                <img src="./public/html.png" alt="HTML Logo" />
-                            </div>
-                            <h3>HTML</h3>
-                            <p class="level">Level: ★★★☆☆</p>
-                            <p class="frameworks">Framework: EJS</p>
-                            <p class="status">
-                                デザインを元に忠実に実装できます
-                            </p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-logo">
-                                <img src="./public/css.png" alt="CSS Logo" />
-                            </div>
-                            <h3>CSS</h3>
-                            <p class="level">Level: ★★★☆☆</p>
-                            <p class="frameworks">
-                                Framework: Sass,TailwindCSS
-                            </p>
-                            <p class="status">
-                                基本的なスタイルやCSSアニメーションを実装できます
-                            </p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-logo">
-                                <img
-                                    src="./public/javascript.png"
-                                    alt="JS Logo"
-                                />
-                            </div>
-                            <h3>JavaScript</h3>
-                            <p class="level">Level: ★★★☆☆</p>
-                            <p class="frameworks">
-                                Framework: React,TypeScript
-                            </p>
-                            <p class="status">
-                                JSアニメーション、フォーム入力制御ができます<br />現在はReact、TypeScriptについても学習中です
-                            </p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-logo">
-                                <img src="./public/php.png" alt="PHP Logo" />
-                            </div>
-                            <h3>PHP</h3>
-                            <p class="level">Level: ★★☆☆☆</p>
-                            <p class="frameworks">Framework: Laravel</p>
-                            <p class="status">
-                                Laravelを用いた簡易なアプリケーションの実装ができます
-                            </p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-logo">
-                                <img
-                                    src="./public/postgrespl.png"
-                                    alt="PostgreSQL Logo"
-                                />
-                            </div>
-                            <h3>PostgreSQL</h3>
-                            <p class="level">Level: ★★☆☆☆</p>
-                            <p class="frameworks">Framework: -</p>
-                            <p class="status">基本的なCRUDを実装できます</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-logo">
-                                <img
-                                    src="./public/docker.png"
-                                    alt="Docker Logo"
-                                />
-                            </div>
-                            <h3>Docker</h3>
-                            <p class="level">Level: ★☆☆☆☆</p>
-                            <p class="frameworks">Framework: -</p>
-                            <p class="status">
-                                Laravel Sailでの環境構築ができます
-                            </p>
-                        </div>
-                    </div>
+        <div id="intro">
+            <h1>Welcome</h1>
+        </div>
+        <!-- wallpaper -->
+        <div class="bg-rotate"></div>
+        <div id="content">
+            <header>
+                <div class="bg-filter" id="js-bgFilter"></div>
+                <!-- nav -->
+                <nav class="site-nav" id="js-siteNav"></nav>
+                <div class="hum">
+                    <button type="button" class="hum-button" id="js-humButton">
+                        <span class="hum-lines"></span>
+                        <span class="hum-lines"></span>
+                        <span class="hum-lines"></span>
+                    </button>
                 </div>
-            </section>
+            </header>
 
-            <!-- Works -->
-            <section id="works">
-                <h2>Works</h2>
-                <div class="works">
-                    <div class="work-card">
-                        <img
-                            class="Portfolio-img"
-                            src="./public/About Me.png"
-                            alt="Portfolio image"
-                        />
-                        <h3>HIJIRI's PortFolio</h3>
-                        <p>
-                            このサイトです。
-                            HTML/CSS/JavaScriptを用いて実装しています。
-                        </p>
+            <main>
+                <!-- hero -->
+                <section class="hero" id="js-hero">
+                    <h1>HIJIRI's Portfolio</h1>
+                </section>
+
+                <!-- About Me -->
+                <section id="about">
+                    <h2 class="about-headline contents">About Me</h2>
+                    <div class="about-description contents"></div>
+                </section>
+
+                <!-- Skills -->
+                <section id="skills">
+                    <div class="skills">
+                        <h2 class="contents">Skills</h2>
+                        <div class="skills-grid contents">
+                            <div class="skill-card">
+                                <div class="skill-logo">
+                                    <img
+                                        src="./public/html.png"
+                                        alt="HTML Logo"
+                                    />
+                                </div>
+                                <h3>HTML</h3>
+                                <p class="level">Level: ★★★☆☆</p>
+                                <p class="frameworks">Framework: EJS</p>
+                                <ul class="status">
+                                    <li>
+                                        基礎を理解し最適なマークアップができます。
+                                    </li>
+                                    <li>
+                                        画面設計書を元にCSS、JSと組み合わせてページを実装できます。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-logo">
+                                    <img
+                                        src="./public/css.png"
+                                        alt="CSS Logo"
+                                    />
+                                </div>
+                                <h3>CSS</h3>
+                                <p class="level">Level: ★★★☆☆</p>
+                                <p class="frameworks">
+                                    Framework: Sass,TailwindCSS
+                                </p>
+                                <ul class="status">
+                                    <li>
+                                        基本的なスタイルやCSSアニメーションを実装できます。
+                                    </li>
+                                    <li>
+                                        フレームワークでの簡易的な実装ができます。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-logo">
+                                    <img
+                                        src="./public/javascript.png"
+                                        alt="JS Logo"
+                                    />
+                                </div>
+                                <h3>JavaScript</h3>
+                                <p class="level">Level: ★★★☆☆</p>
+                                <p class="frameworks">
+                                    Framework: React,TypeScript
+                                </p>
+                                <ul class="status">
+                                    <li>
+                                        JSアニメーション、フォーム入力制御、WebAPIの実装ができます。
+                                    </li>
+                                    <li>
+                                        現在はReact、TypeScriptについても学習中です。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-logo">
+                                    <img
+                                        src="./public/php.png"
+                                        alt="PHP Logo"
+                                    />
+                                </div>
+                                <h3>PHP</h3>
+                                <p class="level">Level: ★★☆☆☆</p>
+                                <p class="frameworks">Framework: Laravel</p>
+                                <ul class="status">
+                                    <li>
+                                        MVCモデルを理解し、Laravelを用いた簡易なアプリケーションの実装ができます。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-logo">
+                                    <img
+                                        src="./public/postgrespl.png"
+                                        alt="PostgreSQL Logo"
+                                    />
+                                </div>
+                                <h3>PostgreSQL</h3>
+                                <p class="level">Level: ★★☆☆☆</p>
+                                <p class="frameworks">Framework: -</p>
+                                <ul class="status">
+                                    <li>基本的なCRUDを実装できます。</li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <div class="skill-logo">
+                                    <img
+                                        src="./public/docker.png"
+                                        alt="Docker Logo"
+                                    />
+                                </div>
+                                <h3>Docker</h3>
+                                <p class="level">Level: ★☆☆☆☆</p>
+                                <p class="frameworks">Framework: -</p>
+                                <ul class="status">
+                                    <li>
+                                        Laravel Sailでの環境構築ができます。
+                                    </li>
+                                    <li>
+                                        GUI（DockerDesktop）での基本的な操作ができます。
+                                    </li>
+                                </ul>
+                                <p class="status"></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="work-card coming-soon">
-                        <h3>Coming Soon...</h3>
-                        <p>
-                            現在準備中です。学習や開発が進み次第、こちらに実績を追加予定です。
-                        </p>
+                </section>
+
+                <!-- Works -->
+                <section id="works">
+                    <h2 class="contents">Works</h2>
+                    <div class="works contents">
+                        <div class="work-card">
+                            <img
+                                class="Portfolio-img"
+                                src="./public/About Me.png"
+                                alt="Portfolio image"
+                            />
+                            <h3>HIJIRI's PortFolio</h3>
+                            <p>使用技術：HTML/CSS,JavaScript,FireBase,Vite</p>
+                            <p>現在ご覧いただいているサイトです。</p>
+                        </div>
+                        <div class="work-card coming-soon">
+                            <h3>Coming Soon...</h3>
+                            <p>
+                                現在準備中です。学習や開発が進み次第、こちらに実績を追加予定です。
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </main>
 
             <footer class="footer" id="footer">
                 <!-- Links -->
                 <div class="links" id="links">
-                    <h2>Links</h2>
-                    <div class="links-items">
+                    <h2 class="contents">Links</h2>
+                    <div class="links-items contents">
                         <a href="https://github.com/geek-3340" target="_blank"
                             ><img src="./public/github.png" alt="github logo"
                         /></a>
@@ -177,7 +215,7 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="contact" id="contact">
+                <div class="contact contents" id="contact">
                     <h2>Contact</h2>
                     <form>
                         <input
@@ -202,12 +240,16 @@
                     </form>
                 </div>
             </footer>
+
             <p class="label-animation">
                 <span class="label-animation__inner"
-                    >Thank you for watching until the end.  Thank you for watching until the end.  Thank you for watching until the end.
+                    >Thank you for watching until the end. Thank you for
+                    watching until the end. Thank you for watching until the
+                    end.
                 </span>
             </p>
-        </main>
-        <script type="module" src="./src/main.js"></script>
+        </div>
+        <!-- Scripts -->
+        <script type="module" src="./assets/scripts/main.js"></script>
     </body>
 </html>
