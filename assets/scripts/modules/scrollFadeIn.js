@@ -9,7 +9,7 @@ export default function scrollFadeIn(){
             }
         });
     }, {
-        threshold: 0.3 // 30%見えたら実行
+        threshold: 0.1 // 10%見えたら実行
     });
     const contents = document.querySelectorAll(".contents");
     contents.forEach(content => {
