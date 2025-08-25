@@ -1,4 +1,4 @@
-export default function windowsEntriesFadeIn(){
+export default function scrollFadeIn(){
     
 
     const observer = new IntersectionObserver(entries => {

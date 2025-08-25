@@ -6,7 +6,6 @@ Base style
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: 'Sriracha', 'Yusei Magic', 'Helvetica Neue', 'Helvetica',
         'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic',
@@ -16,7 +15,6 @@ body {
     overflow: none;
     overflow-x: hidden;
 }
-
 label,
 input,
 textarea,
@@ -24,18 +22,14 @@ select,
 button {
     cursor: pointer;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
 button {
     border: 0;
 }
-
 h2 {
-    /* font-family: 'Bangers'; */
     font-size: 50px;
     margin: 50px 0 20px;
     text-align: center;
@@ -45,23 +39,11 @@ h2 {
         font-size: 40px;
     }
 }
-
 section {
     width: 100vw;
     min-height: 100vh;
     max-height: max-content;
     padding-top: 20px;
-}
-
-.contents{
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 1.5s;
-}
-
-.contents.visible {
-    opacity: 1;
-    transform: translateY(0px);
 }
 
 /*
@@ -79,10 +61,8 @@ intro animation
     align-items: center;
     z-index: 9999;
     animation: introFadeOut 1s ease forwards;
-    animation-delay: 3s; /* 3秒後に消える */
+    animation-delay: 2s;
 }
-
-/* welcome 文字 */
 #intro h1 {
     color: white;
     font-size: 6rem;
@@ -91,11 +71,9 @@ intro animation
 }
 @media screen and (max-width: 768px) {
     #intro h1 {
-    font-size: 3rem;
+        font-size: 3rem;
+    }
 }
-}
-
-/* welcomeがフェードイン */
 @keyframes textFadeIn {
     0% {
         opacity: 0;
@@ -106,8 +84,6 @@ intro animation
         transform: translateY(0);
     }
 }
-
-/* intro全体がフェードアウト */
 @keyframes introFadeOut {
     0% {
         opacity: 1;
@@ -117,8 +93,6 @@ intro animation
         visibility: hidden;
     }
 }
-
-/* ページ本体 */
 #content {
     display: none;
 }
@@ -132,6 +106,19 @@ intro animation
     100% {
         opacity: 1;
     }
+}
+
+/*
+scroll fade in
+*/
+.contents{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1.5s;
+}
+.contents.visible {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 /*
@@ -202,7 +189,6 @@ hero
     }
 }
 .hero h1 {
-    /* font-family: 'Bangers'; */
     position: relative;
     font-size: 50px;
 }
@@ -223,7 +209,7 @@ hero
     border-radius: 50%;
     background: conic-gradient(
         #fff 0deg 340deg,
-        /* ピンク色が90度分だけ描かれる */ transparent 90deg 360deg
+        transparent 90deg 360deg
     );
     animation: spin 2.5s linear infinite;
     mask: radial-gradient(
@@ -255,7 +241,6 @@ site-nav
     right: 0;
     width: max-content;
     color: white;
-    /* font-family: 'Bangers'; */
     padding: 30px 30px;
     text-align: center;
     z-index: 1000;
@@ -273,17 +258,17 @@ site-nav
 .site-nav a {
     color: white;
     font-weight: bold;
-    padding-bottom: 5px; /* テキストと下線の間隔 */
+    padding-bottom: 5px;
     font-size: 16px;
     background-image: linear-gradient(#fff, #fff);
     background-repeat: no-repeat;
-    background-position: bottom right; /* 下線の初期位置 */
-    background-size: 0 8px; /* 下線のサイズ（横幅、高さ） */
-    border-radius: 50%; /* 下線の角丸 */
+    background-position: bottom right;
+    background-size: 0 8px;
+    border-radius: 50%;
     transition: background-size 0.5s;
 }
 .site-nav a:hover {
-    background-position: bottom left; /* 下線の位置を変更 */
+    background-position: bottom left;
     background-size: 100% 8px;
 }
 @media screen and (max-width: 768px) {
@@ -397,7 +382,6 @@ Skills
     width: 90vw;
     margin: 0 auto;
 }
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 横3列固定 */
@@ -417,36 +401,30 @@ Skills
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .skill-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
-
 .skill-logo img {
     width: 60px;
     height: 60px;
     margin-bottom: 1rem;
 }
-
 .skill-card h3 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
     font-weight: bold;
 }
-
 .skill-card .level {
     font-size: 0.9rem;
     color: #eee;
     margin: 0.3rem 0;
 }
-
 .skill-card .frameworks {
     font-size: 0.9rem;
     color: #eee;
     margin: 0.3rem 0;
 }
-
 .skill-card .status {
     font-size: 0.85rem;
     color: #eee;
@@ -585,6 +563,10 @@ form button:hover {
         padding-top: 20px;
     }
 }
+
+/*
+page end animation
+*/
 .label-animation {
     position: relative;
     overflow: hidden;
@@ -599,13 +581,11 @@ form button:hover {
     color: rgba(255, 255, 255, 0.3);
     height: min-content;
 }
-
 .label-animation__inner {
     display: inline-block;
     padding-left: 100vw;
     animation: scroll-label 50s linear infinite;
 }
-
 @keyframes scroll-label {
     0% {
         transform: translateX(0);

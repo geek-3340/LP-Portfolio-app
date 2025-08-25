@@ -4,7 +4,7 @@ export default function introAnimation() {
         if (e.animationName === 'introFadeOut') {
             intro.style.display = 'none';
             content.style.display = 'block';
-            document.body.style.removeProperty('overflow'); // スクロール再有効化
+            document.body.style.removeProperty('overflow');
         }
     });
 }
