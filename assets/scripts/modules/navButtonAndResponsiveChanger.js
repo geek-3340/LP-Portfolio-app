@@ -16,7 +16,6 @@ export default function navButtonAndResponsiveChanger() {
     }
 
     if (window.matchMedia('(max-width: 767px)').matches) {
-        /*
         $siteNav.innerHTML =
             '<ul>' +
             '<li><a href="#">TOP</a></li>' +
@@ -24,9 +23,8 @@ export default function navButtonAndResponsiveChanger() {
             '<li><a href="#skills">Skills</a></li>' +
             '<li><a href="#works">Works</a></li>' +
             '<li><a href="#links">Links</a></li>' +
-            '<li><a href="#contact">Contact</a></li>' +
+            //'<li><a href="#contact">Contact</a></li>' +
             '</ul>';
-            */
     } else {
         $siteNav.classList.remove('is-active');
         $filter.classList.remove('is-active');
