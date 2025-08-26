@@ -17,6 +17,7 @@ window.addEventListener('resize', () => {
     navButtonAndResponsiveChanger();
 });
 
+/*
 document
     .getElementById('contact-form')
     .addEventListener('submit', async (e) => {
@@ -34,3 +35,4 @@ document
         const result = await res.json();
         alert(result.message || result.error);
     });
+*/
