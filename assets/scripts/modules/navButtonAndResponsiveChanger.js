@@ -16,6 +16,7 @@ export default function navButtonAndResponsiveChanger() {
     }
 
     if (window.matchMedia('(max-width: 767px)').matches) {
+        /*
         $siteNav.innerHTML =
             '<ul>' +
             '<li><a href="#">TOP</a></li>' +
@@ -25,12 +26,14 @@ export default function navButtonAndResponsiveChanger() {
             '<li><a href="#links">Links</a></li>' +
             '<li><a href="#contact">Contact</a></li>' +
             '</ul>';
+            */
     } else {
         $siteNav.classList.remove('is-active');
         $filter.classList.remove('is-active');
         $humLines.forEach((line) => {
             line.classList.remove('is-active');
         });
+        /*
         $siteNav.innerHTML =
             '<ul>' +
             '<li><a href="#">TOP</a></li>' +
@@ -39,5 +42,6 @@ export default function navButtonAndResponsiveChanger() {
             '<li><a href="#works">Works</a></li>' +
             '<li><a href="#footer">Links & Contact</a></li>' +
             '</ul>';
+            */
     }
 }
