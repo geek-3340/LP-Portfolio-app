@@ -488,6 +488,7 @@ Links
 */
 .links {
     width: 100vw;
+    height: max-content;
     text-align: center;
 }
 .links-items {
@@ -510,7 +511,6 @@ Links
 @media screen and (max-width: 768px) {
     .links {
         width: 100vw;
-        height: 100vh;
         text-align: center;
         padding-top: 20px;
     }
