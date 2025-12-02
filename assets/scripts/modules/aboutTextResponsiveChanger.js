@@ -1,4 +1,4 @@
-Export default function aboutTextResponsiveChanger() {
+export default function aboutTextResponsiveChanger() {
     const $aboutDes = document.querySelector('.about-description');
     
     // --- モバイル表示（max-width: 767px）向け ---
